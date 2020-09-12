@@ -1,0 +1,48 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+}
+
+header {
+    width: 100%;
+    h1 {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+
+        align-items: center;
+
+        li::after {
+            content: '|';
+            padding: 0.5em;
+        }
+
+        li:nth-last-of-type(1)::after {
+            content: '';
+        }
+    }
+
+    a {
+        text-decoration: none;
+        transition: font-weight ease-in-out 250ms;
+    }
+
+    a:hover,
+    a:focus {
+        font-weight: 800;
+    }
+
+    a[href*='movies']:before {
+        content: '📽️';
+    }
+}
